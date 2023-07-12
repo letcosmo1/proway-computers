@@ -1,0 +1,39 @@
+.pagina-nao-encontrada {
+    display: flex;
+    height: calc(100vh - 304px); 
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+.pagina-nao-encontrada i {
+    font-size: 70px;
+    height: 222px;
+    padding-top: 48px;
+    color: var(--orange);
+}
+.message-container {
+    margin-left: 12px;
+    text-align: center;
+}
+.message-container h2 {
+    font-size: 132px;
+    color: black;
+}
+.message-container p {
+    font-size: 14px;
+    color: black;
+}
+.message-container button {
+    margin-top: 36px;
+    width: 160px;
+    height: 40px;
+    font-size: 14px;
+    color: var(--light-gray);
+    background-color: var(--blue);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.message-container button:hover {
+    background-color: var(--dark-blue);
+}

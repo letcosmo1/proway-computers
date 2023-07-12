@@ -1,0 +1,40 @@
+<div class="carrinho" *ngIf="itens_carrinho.length > 0">
+    <div class="seta-container">
+        <a routerLink=""><i class="fa-solid fa-arrow-left-long"></i></a>
+    </div>
+    <section class="lista-produtos-container">
+        <div class="produto-container" *ngFor="let item of itens_carrinho">
+            <img [src]="item.imagem" alt="">
+            <div class="informacoes-produto">
+                <h2>{{item.descricao}}</h2>
+                <div class="preco-quantidade">
+                    <p>Preço: {{item.preco | currency: "BRL"}}</p>
+                    <label>
+                        Quantidade:
+                        <select name="" [id]="item.id" (change)="atualizarQuantidade(item)">
+                            <option value="{{index}}" *ngFor="let index of novoArray(item.quantidade_estoque)" [selected]="item.quantidade === index ? true : false" >{{index}}</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+            <div class="excluir-produto" (click)="removerProdutoCarrinho(item.id)">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+    </section>
+    <section class="total-container">
+        <h2>Total:</h2>
+        <p>{{total | currency: "BRL"}}</p>
+        <button (click)="finalizarCompra()">FINALIZAR COMPRA</button>
+    </section>
+</div>
+
+<section class="mensagem" *ngIf="itens_carrinho.length === 0">
+    <div class="seta-container">
+        <a routerLink=""><i class="fa-solid fa-arrow-left-long"></i></a>
+    </div>
+    <div class="texto-container">
+        <i class="fa-solid fa-cart-plus"></i>
+        <h2>Carrinho vazio</h2>
+    </div>
+</section>

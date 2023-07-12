@@ -1,0 +1,23 @@
+<section class="detalhes-produto">
+    <div class="seta-container">
+        <a routerLink=""><i class="fa-solid fa-arrow-left-long"></i></a>
+    </div>
+    <div class="img-container">
+        <h2 class="nome-produto">{{produto?.descricao}}</h2>
+        <img [src]="produto?.imagem" alt="">
+    </div>
+    <div class="informacoes-container">
+        <h2>{{produto?.preco | currency: "BRL"}}</h2>
+        <p [ngClass]="quantidade_estoque > 0 ? 'em-estoque' : 'esgotado'">
+            {{quantidade_estoque > 0 ? "Em estoque" : "Esgotado"}}
+        </p>
+        <div class="label-select-container">
+            <label for="select">Quantidade: </label>
+            <select name="quantidade" id="quantidade" (change)="obterQuantidade()">
+                <option *ngFor="let i of array_quantidade_estoque" value="{{i}}" >{{i}}</option>
+            </select>
+        </div>
+        <button (click)="adicionarAoCarrinho()"><i class="fa-solid fa-cart-shopping"></i><p>Adicionar ao carrinho</p></button>
+    </div>
+</section>
+

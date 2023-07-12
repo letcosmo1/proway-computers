@@ -1,0 +1,49 @@
+p {
+	cursor: default;
+}
+header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+}
+header h1 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-left: 24px;
+}
+.proway-logo{
+    color: var(--blue);
+}
+.computers-logo {
+    color: var(--orange);
+}
+header ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+header li {
+    font-size: 14px;
+}
+header li a {
+    margin-right: 28px;
+    color: var(--gray);
+}
+header li i {
+    font-size: 20px;
+}
+.carrinho-icon {
+    margin-right: 24px;
+    color: var(--blue);
+}
+.carrinho-icon:visited {
+    color: var(--blue);
+}
+.carrinho-icon i {
+    margin-right: 5px;
+    font-size: 24px;
+}

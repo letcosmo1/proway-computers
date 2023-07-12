@@ -1,0 +1,14 @@
+<header>
+    <h1><a routerLink=""><span class="proway-logo">ProWay</span><span class="computers-logo">Computers</span></a></h1>
+    <app-barra-de-pesquisa></app-barra-de-pesquisa>
+    <nav>
+        <ul>
+            <li><a routerLink="">Produtos</a></li>
+            <li><a routerLink="contato">Contato</a></li>
+            <li><a><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a><i class="fa-brands fa-twitter"></i></a></li>
+        </ul>
+    </nav>
+    <a class="carrinho-icon" routerLink="carrinho"><i class="fa-solid fa-cart-shopping"></i>{{carrinho_service.obterCarrinho().length}}</a>
+</header>

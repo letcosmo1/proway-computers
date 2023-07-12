@@ -1,0 +1,88 @@
+.detalhes-produto {
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 328px);
+    min-height: 350px;
+    margin: 24px 24px 0 24px;
+}
+.seta-container {
+    width: 10%;
+}
+.seta-container i {
+    height: fit-content;
+    font-size: 24px;
+    color: var(--blue);
+}
+.nome-produto {
+    width: 300px;
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+.img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+}
+.img-container img {
+    width: 300px;
+    box-shadow: 1px 1px 1px var(--light-gray-2);
+}
+.informacoes-container {
+    width: 45%;
+}
+.informacoes-container h2 {
+    font-size: 38px;
+    font-weight: 700;
+    margin-top: 18px;
+    color: var(--orange);
+}
+.em-estoque {
+    font-size: 20px;
+    margin-top: 8px;
+    color: var(--green);
+}
+.esgotado {
+    font-size: 20px;
+    margin-top: 8px;
+    color: var(--red);
+}
+.label-select-container {
+    margin-top: 24px;
+}
+.informacoes-container label {
+    font-size: 16px;
+}
+.informacoes-container select {
+    padding: 6px;
+    border: 1px solid var(--gray);
+    cursor: pointer;
+}
+.informacoes-container select:focus {
+    outline: none;
+}
+.informacoes-container button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 40px;
+    margin-top: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--blue);
+}
+.informacoes-container i {
+    margin-right: 12px;
+    font-size: 20px;
+    color: white;
+}
+.informacoes-container button p {
+    font-size: 14px;
+    color: white;
+}
+.informacoes-container button:hover {
+    cursor: pointer;
+    background-color: var(--dark-blue);
+}
